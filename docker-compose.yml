@@ -1,0 +1,14 @@
+services:
+  web:
+    image: ghcr.io/${GITHUB_REPOSITORY}/flask-app:latest
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
+      - VIRTUAL_HOST=apologetics.steyaert.xyz
+      - VIRTUAL_PORT=8000
+    networks:
+      - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external: true
