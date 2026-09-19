@@ -66,10 +66,10 @@
 </head>
 <body>
     {% if show_navbar is not defined or show_navbar %}
-        {% include 'components/navbar.html' %}
+        {% include 'gospel/components/navbar.html' %}
     {% endif %}
     {# using this makes it where you don't need to copy specific things every time, i.e. navbar, header, etc. #}
     <div class="container mt-5">{% block content %}{% endblock %}</div>
-    {% include 'components/footer.html' %}
+    {% include 'gospel/components/footer.html' %}
 </body>
 </html>
