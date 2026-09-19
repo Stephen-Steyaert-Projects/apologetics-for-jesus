@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% set active_page = 'prophecy' %}
+
+{% block title %}Fulfilled Prophecy{% endblock %}
+{% block description %}Old Testament prophecies about the coming Messiah, and how they converge on Jesus of Nazareth.{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="display-6">Fulfilled Prophecy</h1>
+    <p class="lead">Centuries before His birth, the Old Testament described a coming Messiah in striking detail.</p>
+</div>
+
+<section class="section-card">
+    <h2 class="section-title">What Is Messianic Prophecy?</h2>
+    <p>
+        Scattered across the Hebrew Scriptures &mdash; written across many centuries by many different authors &mdash;
+        is a recurring portrait of a coming figure: a king, a servant, and a redeemer. Christians hold that Jesus of
+        Nazareth fulfilled this portrait in specific, historically verifiable ways, and that the sheer number and
+        specificity of these predictions is itself evidence that His life was not coincidental.
+    </p>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">Born in Bethlehem</h2>
+    <blockquote class="blockquote">
+        <p>&ldquo;But you, Bethlehem Ephrathah, too little to be among the clans of Judah, from you One will go forth for Me to be ruler in Israel.&rdquo;</p>
+        <footer class="blockquote-footer">Micah 5:2</footer>
+    </blockquote>
+    <p>
+        Written roughly 700 years before Jesus' birth, this prophecy names the specific town where the Messiah would
+        be born &mdash; not the more prominent Jerusalem, but the small village of Bethlehem. The Gospel writers record
+        Jesus' birth there, noting that it occurred during a Roman census (Luke 2:1&ndash;7; Matthew 2:1).
+    </p>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">The Suffering Servant</h2>
+    <blockquote class="blockquote">
+        <p>&ldquo;But He was pierced through for our transgressions, He was crushed for our iniquities; the chastening for our well-being fell upon Him, and by His scourging we are healed.&rdquo;</p>
+        <footer class="blockquote-footer">Isaiah 53:5</footer>
+    </blockquote>
+    <p>
+        Isaiah 53 describes a righteous servant who suffers and dies on behalf of others &mdash; despised, rejected,
+        silent before His accusers, and ultimately numbered among criminals in death. Christians see this chapter as
+        a direct portrait of the crucifixion, written some seven centuries before crucifixion existed as a Roman
+        practice.
+    </p>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">Betrayed for Thirty Pieces of Silver</h2>
+    <blockquote class="blockquote">
+        <p>&ldquo;And I said to them, &lsquo;If it is good in your sight, give me my wages; but if not, never mind!&rsquo; So they weighed out thirty shekels of silver as my wages.&rdquo;</p>
+        <footer class="blockquote-footer">Zechariah 11:12</footer>
+    </blockquote>
+    <p>
+        Zechariah names the exact price at which the shepherd-figure is valued and betrayed. Matthew's Gospel
+        records that Judas Iscariot was paid this same amount &mdash; thirty pieces of silver &mdash; to betray Jesus
+        (Matthew 26:15), and that the money was later used to purchase a potter's field, another detail Zechariah and
+        Jeremiah anticipate (Matthew 27:3&ndash;10).
+    </p>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">The Statistical Argument</h2>
+    <p>
+        Apologists have long pointed to the improbability of one person fulfilling so many independent predictions by
+        chance. In <em>Science Speaks</em>, mathematician Peter Stoner calculated the odds of a single individual
+        randomly fulfilling just eight of these Messianic prophecies at roughly 1 in 10<sup>17</sup> &mdash; a number
+        Stoner illustrated by imagining the state of Texas covered two feet deep in silver dollars, one of them
+        marked, with a blindfolded man reaching down to pick the marked coin on his first try (Stoner). Skeptics
+        respond that the calculation assumes the prophecies are independent of one another and that the Gospel
+        writers could not have shaped their accounts to match known prophetic expectations &mdash; an objection worth
+        weighing seriously, and one addressed further in the historical case made on the <a href="{{ url_for('gospel.resurrection') }}">Resurrection</a> page.
+    </p>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">Explore Further</h2>
+    <p>For more on how the Old Testament points to Jesus, including typology and prophetic symbols, see Frank Turek's discussion below.</p>
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/yTMJPyvieHs" title="Jesus in the Old Testament? Look for These Clues! Plus Q&amp;A" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="text-muted small mt-2">Cross Examined. &ldquo;Jesus in the Old Testament? Look for These Clues! Plus Q&amp;A.&rdquo; <em>YouTube</em>, 18 Nov. 2025, <a href="https://youtu.be/yTMJPyvieHs" target="_blank" rel="noopener noreferrer">youtu.be/yTMJPyvieHs</a></p>
+</section>
+{% endblock %}

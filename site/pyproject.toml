@@ -1,0 +1,26 @@
+[project]
+name = "apologetics-for-jesus"
+version = "0.1.0"
+description = "Add your description here"
+readme = "../README.md"
+authors = [
+    { name = "Steve Steyaert", email = "stephen.a.steyaert@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.3",
+    "flask-caching>=2.5.1",
+    "flask-compress>=1.25",
+]
+
+[project.scripts]
+apologetics-for-jesus = "apologetics_for_jesus:main"
+
+[build-system]
+requires = ["uv_build>=0.12.11,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+prod = [
+    "gunicorn>=26.2.0",
+]

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{# documentation: https://jinja.palletsprojects.com/en/stable/templates/ #}
+
+{% set active_page = 'home' %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+<!-- Preload Bootstrap Icons -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style">
+
+<!-- Load CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<style>
+    /* Show light logo by default, hide dark logo */
+    .logo-light {
+        display: inline-block;
+    }
+    .logo-dark {
+        display: none;
+    }
+
+    /* In dark mode, hide light logo and show dark logo */
+    @media (prefers-color-scheme: dark) {
+        .logo-light {
+            display: none;
+        }
+        .logo-dark {
+            display: inline-block;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section">
+    <!--<p class="text-muted mb-2">Stephen  Steyaert</p>-->
+    <h1 class="display-6">The Gospel of Jesus Christ</h1>
+    <p class="lead">The good news, the evidence behind it, and why it matters.</p>
+</div>
+
+<section class="section-card">
+    <h2 class="section-title">What is the Gospel</h2>
+    <p>The core message of Christianity: humanity's sin, Christ's death in our place, His burial, and His resurrection on the third day, according to the Scriptures.</p>
+    <a href="{{ url_for('gospel.gospel_message') }}" class="btn btn-outline-primary btn-sm mt-2">Explore <i class="bi bi-arrow-right"></i></a>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">Fulfilled Prophecy</h2>
+    <p>Centuries before His birth, the Old Testament prophets described the coming Messiah in specific detail &mdash; details Jesus of Nazareth fulfilled.</p>
+    <a href="{{ url_for('gospel.prophecy') }}" class="btn btn-outline-primary btn-sm mt-2">Explore <i class="bi bi-arrow-right"></i></a>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">The Resurrection</h2>
+    <p>The historical evidence for the empty tomb, the post-resurrection appearances, and the origin of the disciples' belief that Jesus rose from the dead.</p>
+    <a href="{{ url_for('gospel.resurrection') }}" class="btn btn-outline-primary btn-sm mt-2">Explore <i class="bi bi-arrow-right"></i></a>
+</section>
+
+{% endblock %}

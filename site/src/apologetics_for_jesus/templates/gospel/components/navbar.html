@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-semibold" href="{{url_for('gospel.home')}}">The Gospel of Jesus Christ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if active_page == 'home' }}" aria-current="page" href="{{url_for('gospel.home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if active_page == 'gospel_message' }}" href="{{url_for('gospel.gospel_message')}}">What is the Gospel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if active_page == 'prophecy' }}" href="{{url_for('gospel.prophecy')}}">Fulfilled Prophecy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if active_page == 'resurrection' }}" href="{{url_for('gospel.resurrection')}}">The Resurrection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ 'active' if active_page == 'references' }}" href="{{url_for('gospel.references')}}">Sources</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

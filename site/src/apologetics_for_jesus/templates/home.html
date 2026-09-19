@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<!-- Preload Bootstrap Icons -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style">
+
+<!-- Load CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<style>
+    /* Show light logo by default, hide dark logo */
+    .logo-light {
+        display: inline-block;
+    }
+    .logo-dark {
+        display: none;
+    }
+
+    /* In dark mode, hide light logo and show dark logo */
+    @media (prefers-color-scheme: dark) {
+        .logo-light {
+            display: none;
+        }
+        .logo-dark {
+            display: inline-block;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <!--<p class="text-muted mb-2">Stephen  Steyaert</p>-->
+    <h1 class="display-6">Apologetics for Jesus</h1>
+    <p class="lead">A case for the Christian faith, one topic at a time.</p>
+</div>
+
+<section class="section-card">
+    <h2 class="section-title">Gospel of Jesus</h2>
+    <p>The core message of Christianity, the Old Testament prophecies that anticipated it, and the historical case for the resurrection.</p>
+    <a href="{{ url_for('gospel.home') }}" class="btn btn-outline-primary btn-sm mt-2">Explore <i class="bi bi-arrow-right"></i></a>
+</section>
+
+<section class="section-card">
+    <h2 class="section-title">Problem of Evil</h2>
+    <p>How can an all-powerful, all-good God allow evil and suffering to exist? A look at the philosophical formulations of the problem and the major Christian responses.</p>
+    <a href="https://problem-of-evil.steyaert.xyz" rel="noreferrer" class="btn btn-outline-primary btn-sm mt-2">Explore <i class="bi bi-arrow-right"></i></a>
+</section>
+
+{% endblock %}

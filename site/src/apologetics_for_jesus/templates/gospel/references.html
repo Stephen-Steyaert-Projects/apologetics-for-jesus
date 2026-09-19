@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% set active_page = 'references' %}
+
+{% block title %}Sources{% endblock %}
+
+{% block css %}
+<style>
+    .references-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .reference-item {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+        line-height: 1.8;
+    }
+
+    .reference-item a {
+        color: #0d6efd;
+        text-decoration: none;
+    }
+
+    .reference-item a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="display-6">Works Cited</h1>
+</div>
+
+<div class="container">
+    <div class="references-list">
+
+        <p class="reference-item">
+            Apologetics Roadshow. "What Is the Gospel? [A Beginner's Guide to Eternity]." <em>YouTube</em>, 7 Sept. 2023, <a href="https://youtu.be/KsMs9HoocpY" target="_blank" rel="noopener noreferrer">youtu.be/KsMs9HoocpY</a>.
+        </p>
+
+        <p class="reference-item">
+            Cross Examined. "Jesus in the Old Testament? Look for These Clues! Plus Q&amp;A." <em>YouTube</em>, 18 Nov. 2025, <a href="https://youtu.be/yTMJPyvieHs" target="_blank" rel="noopener noreferrer">youtu.be/yTMJPyvieHs</a>.
+        </p>
+
+        <p class="reference-item">
+            Habermas, Gary R., and Michael R. Licona. <em>The Case for the Resurrection of Jesus.</em> Kregel Publications, 2004.
+        </p>
+
+        <p class="reference-item">
+            Inspiring Philosophy. "The Resurrection of Jesus." <em>YouTube</em>, <a href="https://youtube.com/playlist?list=PL1mr9ZTZb3TUYymBPce08oyuhnHLLkR_B" target="_blank" rel="noopener noreferrer">youtube.com/playlist?list=PL1mr9ZTZb3TUYymBPce08oyuhnHLLkR_B</a>.
+        </p>
+
+        <p class="reference-item">
+            <em>The New American Standard Bible: 1995 Update.</em> The Lockman Foundation, 1995.
+        </p>
+
+        <p class="reference-item">
+            Stoner, Peter W. <em>Science Speaks: Scientific Proof of the Accuracy of Prophecy and the Bible.</em> Moody Press, 1958.
+        </p>
+
+        <p class="reference-item">
+            Wright, N.T. <em>The Resurrection of the Son of God.</em> Fortress Press, 2003.
+        </p>
+
+    </div>
+</div>
+{% endblock %}
