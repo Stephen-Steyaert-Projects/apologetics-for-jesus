@@ -2,7 +2,7 @@
 name = "apologetics-for-jesus"
 version = "0.1.0"
 description = "Add your description here"
-readme = "../README.md"
+readme = "README.md"
 authors = [
     { name = "Steve Steyaert", email = "stephen.a.steyaert@gmail.com" }
 ]
