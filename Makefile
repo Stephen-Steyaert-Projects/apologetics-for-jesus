@@ -10,12 +10,13 @@ dev: ## Run Flask development server locally
 	cd site && uv run apologetics-for-jesus
 
 css: ## Minify base.css into static/css/base.min.css
-	uv run --with rcssmin -c "\
+	uv run --with rcssmin python3 -c "\
 import rcssmin, pathlib; \
-src = pathlib.Path('site/src/apologetics-for-jesus/static/css/base.css').read_text(); \
-pathlib.Path('site/src/apologetics-for-jesus/static/css/base.min.css').write_text(rcssmin.cssmin(src))" \
-src = pathlib.Path('site/src/apologetics-for-jesus/static/css/gospel/base.css').read_text(); \
-pathlib.Path('site/src/apologetics-for-jesus/static/css/gospel/base.min.css').write_text(rcssmin.cssmin(src))"
+[pathlib.Path(p.parent / (p.stem + '.min.css')).write_text(rcssmin.cssmin(p.read_text())) \
+ for p in [ \
+	pathlib.Path('site/src/apologetics_for_jesus/static/css/base.css'), \
+	pathlib.Path('site/src/apologetics_for_jesus/static/css/gospel/base.css'), \
+ ]]"
 
 
 dev-docker: ## Run Flask in Docker for development

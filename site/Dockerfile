@@ -14,6 +14,15 @@ RUN uv sync --frozen --no-dev --no-install-project --group prod
 COPY . .
 RUN uv sync --frozen --no-dev --group prod
 
+# Minify CSS
+RUN uv run --with rcssmin python3 -c "\
+import rcssmin, pathlib; \
+[pathlib.Path(p.parent / (p.stem + '.min.css')).write_text(rcssmin.cssmin(p.read_text())) \
+ for p in [ \
+	pathlib.Path('src/apologetics_for_jesus/static/css/base.css'), \
+	pathlib.Path('src/apologetics_for_jesus/static/css/gospel/base.css'), \
+ ]]"
+
 # Production stage
 FROM python:3.14-alpine
 
